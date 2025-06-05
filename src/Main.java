@@ -49,17 +49,11 @@ public class Main {
             opcion= in.nextInt();
 
             switch (opcion){
-                case 1->{
-                    addRioja();
-                }
-                case 2 ->{
-                    addAlbarino();
-                }
-                case 3 ->{
-                    addOwnVino();
-                }
-                case 4 -> {System.out.println("Saliendo...");}
-                default -> {System.err.println("Opcion no reconocida");}
+                case 1-> addRioja();
+                case 2 -> addAlbarino();
+                case 3 -> addOwnVino();
+                case 4 -> System.out.println("Saliendo...");
+                default -> System.err.println("Opcion no reconocida");
 
             }
         }while (opcion!=4);
@@ -131,17 +125,11 @@ public class Main {
             opcion= in.nextInt();
 
             switch (opcion){
-                case 1->{
-                    addKellogs();
-                }
-                case 2 ->{
-                    addMPops();
-                }
-                case 3 ->{
-                    addOwnCereal();
-                }
-                case 4 -> {System.out.println("Saliendo...");}
-                default -> {System.err.println("Opcion no reconocida");}
+                case 1-> addKellogs();
+                case 2 -> addMPops();
+                case 3 -> addOwnCereal();
+                case 4 -> System.out.println("Saliendo...");
+                default -> System.err.println("Opcion no reconocida");
 
             }
         }while (opcion!=4);
@@ -191,17 +179,11 @@ public class Main {
             opcion= in.nextInt();
 
             switch (opcion){
-                case 1->{
-                    addFairy();
-                }
-                case 2 ->{
-                    addVanish();
-                }
-                case 3 ->{
-                    addOwnDetergente();
-                }
-                case 4 -> {System.out.println("Saliendo...");}
-                default -> {System.err.println("Opcion no reconocida");}
+                case 1-> addFairy();
+                case 2 -> addVanish();
+                case 3 -> addOwnDetergente();
+                case 4 -> System.out.println("Saliendo...");
+                default -> System.err.println("Opcion no reconocida");
 
             }
         }while (opcion!=4);
@@ -286,7 +268,7 @@ public class Main {
     }
 
     private static void addProducto() {
-        int opcion=0;
+        int opcion;
 
         do {
             System.out.println("<=======_Menú Añadir Producto_=======>");
@@ -298,13 +280,11 @@ public class Main {
             opcion=in.nextInt();
             in.nextLine();
             switch (opcion){
-                case 1->{addDetergente();}
-                case 2->{addCereal();}
-                case 3 ->{addVino();}
-                case 4 -> {
-                    System.out.println("Saliendo...");
-                }
-                default -> {System.err.println("Opción incorrecta");}
+                case 1-> addDetergente();
+                case 2-> addCereal();
+                case 3 -> addVino();
+                case 4 -> System.out.println("Saliendo...");
+                default -> System.err.println("Opción incorrecta");
             }
         }while (opcion!= 4);
 
@@ -341,18 +321,16 @@ public class Main {
         int opcion=in.nextInt();
         in.nextLine();
         switch (opcion){
-            case 1->{modificarCantidad(producto);}
-            case 2->{carrito.remove(producto);}
+            case 1-> modificarCantidad(producto);
+            case 2-> carrito.remove(producto);
             case 3 ->{
                         double precioPorUnidad = producto.getPrecio();
                         int cantidad = carrito.get(producto);
                         double precioTotal= precioPorUnidad*cantidad;
                 System.out.println(producto+"  total: " + precioTotal +"€");
-                ;}
-            case 4 -> {
-                System.out.println("Saliendo...");
             }
-            default -> {System.err.println("Opción incorrecta");}
+            case 4 -> System.out.println("Saliendo...");
+            default -> System.err.println("Opción incorrecta");
         }
     }
 
