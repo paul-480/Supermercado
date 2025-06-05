@@ -20,7 +20,7 @@ public class Detergente extends Producto implements ILiquido, IDescuento {
     public String toString() {
         return "Detergente{" +
                 "marca='" + marca + '\'' +
-                ", precio=" + precio +
+                ", precio=" + precio +'}';
 
     /*
                                ####################
@@ -28,7 +28,7 @@ public class Detergente extends Producto implements ILiquido, IDescuento {
                               #####################
     */
 
-        '}';
+
     }
 
     //######################  Iliquido  ########################################

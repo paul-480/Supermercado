@@ -19,7 +19,7 @@ public class Vino extends Producto implements IDescuento, ILiquido, IAlimento {
     public Vino(double precio, String marca, int graduacionAlcolica, String tipo, LocalDate fechaAlmacenaje, double descuento, double volumen, String envase) {
         super(precio, marca, "Vino");
         this.graduacionAlcolica = graduacionAlcolica;
-        this.tipo = tipos.valueOf(tipo);
+        this.tipo = tipos.valueOf(tipo.toUpperCase().trim());
         this.fechaAlmacenaje = fechaAlmacenaje;
         this.descuento = descuento;
         this.volumen = volumen;

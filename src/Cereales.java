@@ -8,7 +8,7 @@ public class Cereales extends Producto implements IAlimento {
     private enum tiposCereal {ESPELTA, MAIZ, TRIGO, OTROS}
 
     private tiposCereal tipoCereal;
-    LocalDate fechaAlmacenamiento;
+    private LocalDate fechaAlmacenamiento;
 
     public Cereales(double precio, String marca, String tipoCereal) {
         super(precio, marca, "Cereal");
