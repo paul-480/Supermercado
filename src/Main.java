@@ -317,7 +317,6 @@ public class Main {
         System.out.println("2.Eliminar");
         System.out.println("3.Ver precio de la suma de este producto");
         System.out.println("4.Volver");
-        System.out.println("");
         System.out.print("Su elección: ");
         int opcion=in.nextInt();
         in.nextLine();
