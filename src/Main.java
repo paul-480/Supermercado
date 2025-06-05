@@ -317,21 +317,24 @@ public class Main {
         System.out.println("2.Eliminar");
         System.out.println("3.Ver precio de la suma de este producto");
         System.out.println("4.Volver");
+        System.out.println("");
         System.out.print("Su elección: ");
         int opcion=in.nextInt();
         in.nextLine();
         switch (opcion){
-            case 1-> modificarCantidad(producto);
-            case 2-> carrito.remove(producto);
-            case 3 ->{
-                        double precioPorUnidad = producto.getPrecio();
-                        int cantidad = carrito.get(producto);
-                        double precioTotal= precioPorUnidad*cantidad;
-                System.out.println(producto+"  total: " + precioTotal +"€");
-            }
+            case 1 -> modificarCantidad(producto);
+            case 2 -> carrito.remove(producto);
+            case 3 -> precioProductoTotal(producto);
             case 4 -> System.out.println("Saliendo...");
             default -> System.err.println("Opción incorrecta");
         }
+    }
+
+    private static void precioProductoTotal(Producto producto) {
+        double precioPorUnidad = producto.getPrecio();
+        int cantidad = carrito.get(producto);
+        double precioTotal= precioPorUnidad*cantidad;
+        System.out.println(producto +"  total: " + precioTotal +"€");
     }
 
     private static void modificarCantidad(Producto producto) {
